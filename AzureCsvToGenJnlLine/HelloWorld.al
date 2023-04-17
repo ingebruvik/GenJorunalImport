@@ -5,8 +5,11 @@
 pageextension 50000 CustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
+    var
+        Blob: Codeunit AzureBlobHandler;
     begin
         Message('App published: Hello world');
+        Blob.CreateGLLines();
     end;
 }
 
